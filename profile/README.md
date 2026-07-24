@@ -49,23 +49,32 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 
 # Tech Stack
 
-## Frontend
+| 구분 | 스택 |
+|---|---|
+| Frontend | React 19, Vite 8, JavaScript(ES6+), Context API, Fetch API, CSS3, lucide-react |
+| Backend | Java 21, Spring Boot 4, Spring Security, Spring Data JPA, MySQL, JWT(jjwt) |
+| 공통 | REST API, JWT 인증, Git/GitHub |
 
-- React 19
-- Vite 8
-- JavaScript (ES6+)
-- Context API
-- Fetch API
-- CSS3
-- Lucide React
+---
 
-## Backend
+## 전체 아키텍처
 
-- Spring Boot
-- Spring Security
-- JPA
-- MySQL
-- JWT
+```
+┌───────────────────────┐        HTTPS / JSON        ┌───────────────────────────┐
+│   meetory-frontend     │ ─────────────────────────▶ │      meetory-backend       │
+│   React 19 + Vite      │   Authorization: Bearer     │  Spring Boot 4 + Security  │
+│   (localhost:5173)     │ ◀───────────────────────── │      (localhost:8080)      │
+└───────────────────────┘        ApiResponse<T>        └─────────────┬─────────────┘
+                                                                       │ JPA / Hibernate
+                                                                       ▼
+                                                               ┌───────────────┐
+                                                               │    MySQL 8     │
+                                                               └───────────────┘
+```
+
+- 개발 환경에서는 Vite의 `/api` 프록시 설정으로 프론트(5173) → 백엔드(8080) 요청이 그대로 전달되어, 백엔드에 별도 CORS 설정 없이도 로컬 연동이 가능합니다. (배포/외부 접근 환경을 위해 백엔드에도 CORS 설정이 포함되어 있습니다.)
+- 모든 API 응답은 백엔드 공통 규격인 `ApiResponse<T> = { success, message, data }` 형태로 통일되어 있습니다.
+- 인증이 필요한 요청은 `Authorization: Bearer {accessToken}` 헤더로 전달됩니다.
 
 ---
 
@@ -206,3 +215,11 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 | Vite | 8 |
 | Backend | Spring Boot |
 | Database | MySQL |
+
+--- 
+
+더 자세한 내용은 각 파트의 README를 확인해 주세요.
+
+- 📱 [Frontend README](https://github.com/URECA-Meetory/Meetory_FE/blob/main/README.md)
+- ⚙️ [Backend README](https://github.com/URECA-Meetory/Meetory_BE/blob/main/README.md)
+
