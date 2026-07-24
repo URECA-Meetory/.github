@@ -1,4 +1,4 @@
-# Meetory Frontend
+# Meetory
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
@@ -69,7 +69,7 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 
 ---
 
-# 주요 기능
+# 주요 기능 및 화면
 
 ## 🔐 로그인 / 회원가입
 
@@ -156,154 +156,6 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 
 ---
 
-# 프로젝트 구조
-
-```
-src
-│
-├── api
-│   └── client.js
-│
-├── assets
-│
-├── components
-│   ├── BoardDetailModal.jsx
-│   ├── CreateBoardModal.jsx
-│   ├── CreateTeamModal.jsx
-│   ├── Gauge.jsx
-│   ├── Modal.jsx
-│   ├── TeamCard.jsx
-│   ├── TeamDetailModal.jsx
-│   ├── TeamManageModal.jsx
-│   └── UserMenu.jsx
-│
-├── context
-│   ├── AuthContext.jsx
-│   └── ToastContext.jsx
-│
-├── pages
-│   ├── AuthPage.jsx
-│   ├── BoardPage.jsx
-│   ├── MyPage.jsx
-│   ├── OnboardingPage.jsx
-│   ├── TeamManagePage.jsx
-│   └── TeamMatchPage.jsx
-│
-├── styles
-│   ├── global.css
-│   └── tokens.css
-│
-├── App.jsx
-├── main.jsx
-└── vite.config.js
-```
-
----
-
-# 실행 방법
-
-## 프로젝트 설치
-
-```bash
-npm install
-```
-
-## 개발 서버 실행
-
-```bash
-npm run dev
-```
-
-브라우저
-
-```
-http://localhost:5173
-```
-
----
-
-# Backend 실행
-
-Spring Boot 서버 실행
-
-```
-MeetoryApplication
-```
-
-기본 주소
-
-```
-http://localhost:8080
-```
-
----
-
-# API Proxy
-
-Frontend
-
-```
-/api/**
-```
-
-↓
-
-Backend
-
-```
-http://localhost:8080
-```
-
-Backend 주소 변경
-
-```bash
-VITE_API_TARGET=http://localhost:9090 npm run dev
-```
-
----
-
-# API 연동
-
-| 기능 | Method | URL |
-|------|--------|-----|
-| 회원가입 | POST | `/api/auth/signup` |
-| 로그인 | POST | `/api/auth/login` |
-| 로그아웃 | POST | `/api/auth/logout` |
-| 온보딩 | POST | `/api/users/onboarding` |
-| 모임 목록 | GET | `/api/teams` |
-| 모임 생성 | POST | `/api/teams` |
-| 모임 상세 | GET | `/api/teams/{teamId}` |
-| 모임 신청 | POST | `/api/teams/{teamId}/apply` |
-| 팀원 조회 | GET | `/api/teams/{teamId}/members` |
-| 신청 승인 | POST | `/api/teams/{teamId}/applications/{memberId}/approve` |
-| 신청 거절 | POST | `/api/teams/{teamId}/applications/{memberId}/reject` |
-| 게시글 목록 | GET | `/api/boards` |
-| 게시글 작성 | POST | `/api/boards` |
-
----
-
-# 인증 방식
-
-로그인 성공 시
-
-```
-accessToken
-userId
-nickname
-```
-
-을 LocalStorage에 저장합니다.
-
-인증이 필요한 요청은
-
-```
-Authorization: Bearer {accessToken}
-```
-
-헤더를 자동으로 추가합니다.
-
----
-
 # 프로젝트 특징
 
 - React Context 기반 인증 관리
@@ -323,9 +175,9 @@ Authorization: Bearer {accessToken}
 
 | 이름 | 담당 |
 |------|------|
-| **이수현** | 로그인 / 회원가입 / 온보딩 / 마이페이지(개인정보) |
-| **정문구** | 게시판 |
-| **조성원** | 메인 화면 / 모임 모집 / 모임 관리 / 마이페이지(쪽지함) |
+| **이수현** | 로그인 / 회원가입 / 온보딩 / 마이페이지(개인정보) BE & FE |
+| **정문구** | 게시판 BE & FE |
+| **조성원** | 메인 화면 / 모임 모집 / 모임 관리 / 마이페이지(쪽지함) BE & FE |
 
 ---
 
