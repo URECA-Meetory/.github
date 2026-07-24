@@ -60,16 +60,16 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 ## 전체 아키텍처
 
 ```
-┌───────────────────────┐        HTTPS / JSON        ┌───────────────────────────┐
-│   meetory-frontend     │ ─────────────────────────▶ │      meetory-backend       │
-│   React 19 + Vite      │   Authorization: Bearer     │  Spring Boot 4 + Security  │
-│   (localhost:5173)     │ ◀───────────────────────── │      (localhost:8080)      │
-└───────────────────────┘        ApiResponse<T>        └─────────────┬─────────────┘
-                                                                       │ JPA / Hibernate
-                                                                       ▼
-                                                               ┌───────────────┐
-                                                               │    MySQL 8     │
-                                                               └───────────────┘
+┌───────────────────────┐        HTTPS / JSON         ┌───────────────────────────┐
+│   meetory-frontend    │ ─────────────────────────▶ │      meetory-backend      │
+│   React 19 + Vite     │   Authorization: Bearer     │  Spring Boot 4 + Security │
+│   (localhost:5173)    │ ◀───────────────────────── │      (localhost:8080)     │
+└───────────────────────┘        ApiResponse<T>       └─────────────┬─────────────┘
+                                                                    │ JPA / Hibernate
+                                                                    ▼
+                                                             ┌───────────────┐
+                                                             │    MySQL 8    │
+                                                             └───────────────┘
 ```
 
 - 개발 환경에서는 Vite의 `/api` 프록시 설정으로 프론트(5173) → 백엔드(8080) 요청이 그대로 전달되어, 백엔드에 별도 CORS 설정 없이도 로컬 연동이 가능합니다. (배포/외부 접근 환경을 위해 백엔드에도 CORS 설정이 포함되어 있습니다.)
@@ -88,9 +88,7 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 - 자동 로그인
 - 로그아웃
 
----
-
-## 👤 온보딩
+# 👤 온보딩
 
 최초 로그인 이후
 
@@ -99,6 +97,13 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 - 관심사 선택
 
 사용자 정보를 입력할 수 있습니다.
+
+<img src="https://github.com/user-attachments/assets/1f263238-99cd-41fc-9010-b2cd4148754b" width="100">
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ac535368-c17b-43c6-a12e-6821ed43af43" width="49%">
+<img src="https://github.com/user-attachments/assets/cd8cd1de-d0a1-483f-b3fa-849d98c06586" width="49%">
+</p>
 
 ---
 
@@ -146,7 +151,11 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 - 게시글 작성
 - 게시글 상세 조회
 
-(Backend API 연동 진행 중)
+<img src="https://github.com/user-attachments/assets/5ed827f4-d3ad-4adb-b2b2-f7b2cb57dcd3" width="100">
+<p align="center">
+<img src="https://github.com/user-attachments/assets/230be3f7-613f-4af5-b3ce-f110e93d4705" width="49%">
+<img src="https://github.com/user-attachments/assets/91f377aa-ca87-4042-9393-ea2b162b107d" width="49%">
+</p>
 
 ---
 
@@ -159,8 +168,8 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 - 쪽지 송수신
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/24cceae5-727b-460e-9f2e-bf3dcbadc98d" width="49%">
-<img src="https://github.com/user-attachments/assets/abe46b35-f215-4e0a-ae3b-245b7cfdaabc" width="49%">
+<img src="https://github.com/user-attachments/assets/bb9952f8-0610-4470-bf7f-895fcf781b6d" width="49%">
+<img src="https://github.com/user-attachments/assets/a42d0c12-53ef-4dde-8dd7-e8c87791ef3d" width="49%">
 </p>
 
 ---
