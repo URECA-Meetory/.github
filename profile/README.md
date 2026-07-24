@@ -5,12 +5,13 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![SpringBoot](https://img.shields.io/badge/API-SpringBoot-6DB33F?logo=springboot&logoColor=white)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)
+<img width="1199" height="318" alt="image" src="https://github.com/user-attachments/assets/18a0d4cf-4332-42a5-abe1-a1c3d5072d54" />
 
 > **Meetory (Meetup + Story)**  
 > 관심사가 같은 사람들과 모임을 만들고 참여하며 새로운 이야기를 만들어가는 커뮤니티 플랫폼입니다.
 
 React + Vite 기반으로 개발된 Frontend 프로젝트이며 Spring Boot Backend와 REST API를 통해 통신합니다.
-<img width="1199" height="318" alt="image" src="https://github.com/user-attachments/assets/18a0d4cf-4332-42a5-abe1-a1c3d5072d54" />
+
 
 ---
 
