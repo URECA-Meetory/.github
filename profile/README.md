@@ -88,8 +88,6 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 - 자동 로그인
 - 로그아웃
 
-* 온보딩
-
 최초 로그인 이후
 
 - 나이 입력
@@ -99,7 +97,7 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 사용자 정보를 입력할 수 있습니다.
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/1f263238-99cd-41fc-9010-b2cd4148754b" width="100">
+<img src="https://github.com/user-attachments/assets/1f263238-99cd-41fc-9010-b2cd4148754b" width="100%">
 </p>
 
 <p align="center">
@@ -154,7 +152,7 @@ Meetory는 관심사가 같은 사람들을 연결해주는 모임 플랫폼입�
 - 게시글 상세 조회
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/5ed827f4-d3ad-4adb-b2b2-f7b2cb57dcd3" width="100">
+<img src="https://github.com/user-attachments/assets/5ed827f4-d3ad-4adb-b2b2-f7b2cb57dcd3" width="100%">
 </p>
 
 <p align="center">
